@@ -4,11 +4,11 @@
 
 class Test
 {
-	static object _obj;
-	//precise
+	static object obj;
+	// precise
 	static Test()
 	{
-		_obj = new object();
+		obj = new object();
 	}
 }
 

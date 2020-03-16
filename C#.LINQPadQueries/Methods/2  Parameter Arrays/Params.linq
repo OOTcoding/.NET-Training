@@ -19,7 +19,9 @@ public static void Main()
 	Console.WriteLine(Add());
 	Console.WriteLine(AddArr(new int[] { 1, 2, 3, 4, 5 }));
 	DisplayTypes(new Object(), new Random(), ".NET Framework 4.0", 5);
-	Console.WriteLine("0", 1,2,3,4,5);
+	Console.WriteLine("0", 1, 2, 3, 4, 5);
+	Process.Start(@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
+
 }
 
 private static int Add(params int[] values)

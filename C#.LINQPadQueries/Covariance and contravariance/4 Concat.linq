@@ -10,7 +10,7 @@ void Main()
 	var dogs = new List<Dog> { new Dog() };	
 	
 	Enumerable.Concat(cats, dogs).Dump();
-	//не обобщенная версия инвариантность
+	//не обобщенная версия инвариантности
 
 	Enumerable.Concat<Animal>(cats, dogs).Dump();
 

@@ -18,11 +18,13 @@ public class LogFile
 
 public class LazyLogDemo
 {
+	// https://msdn.microsoft.com/ru-ru/library/dd642331(v=vs.110).aspx
 	private readonly Lazy<LogFile> _lazyLog = new Lazy<LogFile>();
 
 	public LazyLogDemo()
 	{
 		string msg = string.Empty;
+		
 		bool isError = false;
 
 		// Do something

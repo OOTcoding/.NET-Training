@@ -12,4 +12,5 @@ int c = 3;
 int d = 1;
 
 int res = d + b * c / a;
+res.Dump();
 //Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe",Assembly.GetExecutingAssembly().Location);

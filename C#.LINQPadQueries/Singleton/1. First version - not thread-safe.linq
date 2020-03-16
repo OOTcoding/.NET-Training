@@ -3,13 +3,12 @@
 </Query>
 
 #region First version
-// Not thread-safe
-// Bad code! Do not use!
+// Not thread-safe! Bad code! Do not use!
 #endregion
 
 public sealed class Singleton
 {
-	private static Singleton instance = null;
+	private static Singleton instance;//or = null;
 
 	private Singleton() { }
 
@@ -26,4 +25,7 @@ public sealed class Singleton
 	}
 }
 
-void Main(){ }
+void Main()
+{
+	//Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
+}

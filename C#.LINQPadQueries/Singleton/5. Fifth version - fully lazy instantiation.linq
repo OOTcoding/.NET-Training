@@ -6,12 +6,12 @@
 // Fifth version - fully lazy instantiation
 #endregion
 
-//Полностью «ленивая» реализация
+// Полностью «ленивая» реализация
 public sealed class Singleton
 {
 	private Singleton(){ }
 
-	public static Singleton Instance { get { return Nested.instance; } }
+	public static Singleton Instance { get => Nested.instance; }
 	
 	// Именно вложенный класс делает реализацию полностью «ленивой»
 	private class Nested
@@ -24,7 +24,7 @@ public sealed class Singleton
 
 void Main() { }
 
-//У всех представленных реализаций есть несколько важных особенностей.
+// У всех представленных реализаций есть несколько важных особенностей.
 // 1.Обработка исключений. 
 // Поскольку инициализация синглтона происходит в статическом конструкторе,
 // то в случае генерации исключения все клиенты получат его «завернутым»
@@ -37,18 +37,18 @@ void Main() { }
 // beforeFieldInit, что позволит вызвать сгенерированный статический 
 // конструктор отложенным (relaxed) образом задолго до первого 
 // обращения к синглтону.
-//Так, cинглтон будет проинициализирован еще до вызова метода Main, даже 
-//если условие не будет выполняться во время исполнения.
+// Так, cинглтон будет проинициализирован еще до вызова метода Main, даже 
+// если условие не будет выполняться во время исполнения.
 //
-//static void Main(string[] args)
-//{
-//	Console.WriteLine("Starting Main...");
-//	if (args.Length == 1)
-//	{
-//		var s = SingletonWithoutStaticCtor.Instance;
+// static void Main(string[] args)
+// {
+//		Console.WriteLine("Starting Main...");
+//		if (args.Length == 1)
+//		{
+//			var s = SingletonWithoutStaticCtor.Instance;
+//		}
+//		Console.ReadLine();
 //	}
-//	Console.ReadLine();
-//}
 //3. «Ленивость».
 // Эта реализация не полностью «ленива». Инициализация такого синглтона
 // происходит во время вызова статического конструктора, который может 

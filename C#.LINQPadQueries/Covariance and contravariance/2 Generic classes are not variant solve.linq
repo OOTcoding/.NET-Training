@@ -8,7 +8,8 @@ void Write<T>(List<T> animals) where T: Animal
 {
 	foreach(var a in animals)
 		a.Dump();
-		//animals[0]=(T)(object)(new Dog());
+		
+	//animals[0]=(T)(object)(new Dog());
 }
 
 void Main()

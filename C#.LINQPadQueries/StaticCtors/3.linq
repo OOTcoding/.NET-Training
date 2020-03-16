@@ -3,8 +3,10 @@
 class Foo
 {
 	public static Foo Instance = new Foo();
+	
 	public static int x = 3;
-	Foo() { Console.WriteLine (x); }
+	
+	Foo() => Console.WriteLine (x);
 }
 
 void Main()

@@ -14,10 +14,10 @@ void Main()
 	}
 	//vs
 	"-------------------".Dump();
-	(noNullSample == null ? null : 
-		noNullSample.FooProperty == null ? null : 
-		noNullSample.FooProperty.BarProperty == null ? null : 
-		noNullSample.FooProperty.BarProperty).DoSomething();
+//	(noNullSample == null ? null : 
+//		noNullSample.FooProperty == null ? null : 
+//		noNullSample.FooProperty.BarProperty == null ? null : 
+//		noNullSample.FooProperty.BarProperty).DoSomething();
 	//vs
 	"-------------------".Dump();
 	noNullSample?.FooProperty?.BarProperty?.DoSomething();

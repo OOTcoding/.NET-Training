@@ -14,5 +14,5 @@ void Main()
 
 void Foo (int x) => Console.WriteLine ("integer");
 void Foo (string x) => Console.WriteLine ("string"); 
-//void Foo (object x)	=> Console.WriteLine ("object");//CTE
+//void Foo (object x)	=> Console.WriteLine ("object");//CTE object == dynamic for compiler
 void Foo (dynamic x)	=> Console.WriteLine ("dynamic");

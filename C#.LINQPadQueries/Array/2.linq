@@ -6,10 +6,12 @@
 
 int[] array = new int[5];
 array[1] = 1;
+array.Dump("array");
 array.GetType().Dump();
 Array array1 = Array.CreateInstance(typeof(Int32), 5);
+//array = array1;
 array1.GetType().Dump();
-//array1[1] = 12;
+array1.SetValue(12,1);
 
 int[] array2 = (int[])Array.CreateInstance(typeof(Int32), 5);
 

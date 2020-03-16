@@ -5,14 +5,16 @@
 class Test
 {
 	public static string x = EchoAndReturn ("In type initializer");
+	
 	public static int t = 34;
+	
 	public static string EchoAndReturn (string s)
 	{
 		Console.WriteLine (s);
 		return s;
 	}
 	
-	//static Test(){ }
+	static Test(){ }
 }
 
 static void Main()
@@ -28,12 +30,12 @@ static void Main()
 	{
 		Console.WriteLine("After field access");
 	}
-	Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
+	//Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
 }
 
-//Результаты выполнения весьма разнообразны. 
-//Среда выполнения может принять решение о запуске
-//инициализатора типа по загрузке сборки, чтобы начать с
+// Результаты выполнения весьма разнообразны. 
+// Среда выполнения может принять решение о запуске
+// инициализатора типа по загрузке сборки, чтобы начать с
 
 //In type initializer
 //Starting Main

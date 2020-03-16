@@ -9,18 +9,17 @@
 public sealed class Singleton
 {
 	private static readonly Lazy<Singleton> instance =
-		new Lazy<Singleton>(() => new Singleton());
+		new Lazy<Singleton>(() => new Singleton(), LazyThreadSafetyMode.PublicationOnly);
 	
-	public static Singleton Instance { get { return instance.Value; } }
+	public static Singleton Instance { get => instance.Value; } 
 
 	private Singleton(){ }
 }
 
-//Достоинства: простота + потокобезопасность + «ленивость»!
-//Недостаток: доступна только в.NET 4.0 +.
-
+// Достоинства: простота + потокобезопасность + «ленивость»!
+// Недостаток: доступна только в.NET 4.0 +.
 
 void Main()
 {
-	//Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
+	// Process.Start (@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
 }

@@ -1,13 +1,11 @@
 <Query Kind="Program" />
 
-// A static constructor executes once per type, rather than once per instance:
+// A static constructor executes once per type,
+// rather than once per instance:
 
 class Test
 {
-	static Test()
-	{
-		Console.WriteLine ("Type Initialized");
-	}
+	static Test() => Console.WriteLine ("Type Initialized");
 }
 
 static void Main()

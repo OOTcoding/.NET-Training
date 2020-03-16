@@ -21,7 +21,7 @@ class C
 		// Count в IListCounter двузначный. Проблема
 		//неоднозначности решается приведением x к соответствующему 
 		//типу интерфейса. Например:
-		//((IList)x).Count = 1;
-		//((ICounter)x).Count(1);
+		((IList)x).Count = 1;
+		((ICounter)x).Count(1);
 	}
 }

@@ -10,7 +10,8 @@
 
 public sealed class Singleton
 {
-	private static Singleton instance = null;
+	private static Singleton instance;
+	
 	private static readonly object padlock = new object();
 
 	private Singleton() { }

@@ -10,6 +10,7 @@ class Dog : Animal
 void Main()
 {
 	object x = new Dog();
-	
+	x.GetType().Dump();
+	x.GetType().GetMethod ("Woof").Dump();
 	x.GetType().GetMethod ("Woof").Invoke (x, null);
 }

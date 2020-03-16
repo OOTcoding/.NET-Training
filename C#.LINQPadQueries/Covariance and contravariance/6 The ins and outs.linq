@@ -7,7 +7,7 @@
 //Ковариация(ковариантность) безопасна только тогда, когда тип описывает  
 //только те операции, которые возвращают параметры типа
 
-public interface IEnumerable <out T>
+public interface IEnumerable<out T>
 {
 	IEnumerator<T> GetEnumerator();
 }
@@ -18,9 +18,9 @@ public interface IEnumerable <out T>
 //Контравариация(контравариантность) безопасна только тогда, 
 //когда тип описывает только те операции, которые получают параметры типа 
 
-public interface IComparer <in T>
+public interface IComparer<in T>
 {
-	int Compare (T x, T y);	
+	int Compare(T x, T y);
 }
 
 

@@ -17,6 +17,6 @@ void Main()
 {
 	var staticPerson = new Person (); 
 	dynamic dynamicPerson = new Person (); 
-	//staticPerson.GetFullName("John", "Smith"); 
+	//staticPerson.GetFullName("John", "Smith"); //CTR!
 	dynamicPerson.GetFullName("John", "Smith"); 
 }

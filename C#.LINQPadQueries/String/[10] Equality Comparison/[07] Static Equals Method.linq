@@ -13,12 +13,12 @@ static void Main()
 // Here's how we can use object.Equals:
 class Test <T>
 {
-	T _value;
+	T value;
 	public void SetValue (T newValue)
 	{
-		if (!object.Equals (newValue, _value))
+		if (!object.Equals (newValue, value))
 		{
-			_value = newValue;
+			value = newValue;
 			OnValueChanged();
 		}
 	}

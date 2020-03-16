@@ -4,7 +4,7 @@
 
 public class Test
 {
-	public static object _obj = new object();
+	public static object obj = new object();// relax
 }
 static void Main()
 {

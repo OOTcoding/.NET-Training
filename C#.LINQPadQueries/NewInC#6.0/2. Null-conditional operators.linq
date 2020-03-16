@@ -26,7 +26,9 @@ void Main()
 	//The null-conditional operator is conveniently used together with the null coalescing operator ??:
 	Customer[] customers1 = null;
 	int length1 = customers1?.Length ?? 0; // 0 if customers is null
+	int length2 = customers1?.Length == null ? 0 : customers.Length;
 	length1.Dump();
+	length2.Dump();
 }
 
 public class Customer
@@ -43,7 +45,7 @@ public class Customer
 	}
 	
 	public Customer(string first, string last)
-    {
-        Name = first + " " + last;
+	{
+		Name = $"{first}  {last}";
     }
 }

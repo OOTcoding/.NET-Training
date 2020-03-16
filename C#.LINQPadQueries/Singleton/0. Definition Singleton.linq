@@ -34,3 +34,6 @@ of accessing the instance. In all cases, the property could easily be converted 
 with no impact on thread-safety or performance.
 */
 #endregion
+
+//static class vs singleton
+//https://habrahabr.ru/post/103681/

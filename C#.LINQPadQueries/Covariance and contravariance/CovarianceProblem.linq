@@ -6,11 +6,15 @@
   <Namespace>System.Xml.Serialization</Namespace>
 </Query>
 
-//Func<string> stringFunc = () => "";
-//Func<object> objectFunc = () => new object();
-//Func<object> combined = objectFunc + stringFunc;//<-ArgumentException
-
-Func<string> stringFunc = () => "";
-Func<object> defensiveCopy = new Func<object>(stringFunc);
-Func<object> objectFunc = () => new object();
-Func<object> combined = objectFunc + defensiveCopy;
+{
+	Func<string> stringFunc = () => "";
+	Func<object> objectFunc = () => new object();
+	//Func<object> combined = objectFunc + stringFunc;//<-ArgumentExceptio
+}
+{
+	Func<string> stringFunc = () => "";
+	Func<object> defensiveCopy = new Func<object>(stringFunc);
+	Func<object> objectFunc = () => new object();
+	Func<object> combined = objectFunc + defensiveCopy;
+	combined.Dump();
+}

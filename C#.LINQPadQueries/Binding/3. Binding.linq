@@ -15,6 +15,10 @@ class C
 {
 	public static void X(B b, int d)
 	{
-		b.M(d);//b может быть null
+		b.M(d); // b может быть null
 	}
 }
+
+
+
+

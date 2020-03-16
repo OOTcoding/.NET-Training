@@ -4,7 +4,8 @@
 
 class Test
 {
-	static object _obj = new object();
+	static object obj = new object();
+	// precise
 	static Test() { }
 }
 

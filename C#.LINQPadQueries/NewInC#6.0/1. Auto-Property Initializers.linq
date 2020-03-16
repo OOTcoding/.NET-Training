@@ -7,16 +7,23 @@ void Main()
 	sm.GuidNew.Dump();
 	sm.Guid.Dump();
 	sm.GuidNew.Dump();
-	//Process.Start(@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
+	Process.Start(@"C:\Program Files (x86)\Red Gate\.NET Reflector\Desktop 8.0\Reflector.exe", Assembly.GetExecutingAssembly().Location);
 }
 
-//vs C# 5.0
+public class Sample0
+{
+	private string name = "Default initial value";
+	//usual property
+	public string Name { get { return name; } set { name = value; } }
+}
+
+//C# 5.0
 public class Sample1
 {
+	//immutable inside and outside!
 	private readonly string name = "Default initial value";
-	//public string Name { get { return name; } set { name = value; } }
+	//only for read property, no setter!
 	public string Name { get { return name; } }
-
 }
 
 //immutable outside only! C# 5.0
@@ -41,12 +48,12 @@ public class Sample3
 {
 	//Initializers for auto-properties
 	//The initializer directly initializes the backing field;
-	//it doesn’t work through the setter of the auto- property
+	//it doesn’t work through the setter of the auto-property
 	public string Name { get; set; } = "Default initial value";
 }
 
 //vs C# 6.0
-//immutable inside!
+//immutable inside and outside!
 public class Sample4
 {
 	//implicitly declared field as readonly

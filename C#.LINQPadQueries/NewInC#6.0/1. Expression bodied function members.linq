@@ -24,7 +24,7 @@ class Point
 class Complex
 {
 	//Expression bodies on method-like members
-	public static Complex operator +(Complex a, Complex b) => Add(a, b);
+	public static Complex operator + (Complex a, Complex b) => Add(a, b);
 	
 	public static Complex Add(Complex lhs, Complex rhs)
 	{
@@ -39,8 +39,7 @@ class Customer
 	public string Last { get; }
 	//...
 	//Expression bodies on method-like members
-	public static implicit operator string(Customer p)
-          => p.First + " " + p.Last;
+	public static implicit operator string(Customer p) => p.First + " " + p.Last;
 	//Expression bodies on method-like members	  
 	public void Print() => Console.WriteLine(First + " " + Last);
 	

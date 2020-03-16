@@ -25,6 +25,9 @@ class Bar
 }
 class Baz : Bar 
 {
-	public int Foo() { Console.WriteLine("Baz.Foo");return 0; }
-	public static void Qux() { Console.WriteLine("Baz.Qux"); } 
+	public new int Foo() { Console.WriteLine("Baz.Foo");return 0; }
+	public new static void Qux() { Console.WriteLine("Baz.Qux"); } 
 }
+
+
+

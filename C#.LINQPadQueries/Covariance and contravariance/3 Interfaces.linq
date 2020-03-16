@@ -26,5 +26,4 @@ void Main()
 	Write (new List<Dog>    { new Dog(), new Dog() } );
 	IEnumerable<Dog> g = new List<Dog>();
 	IEnumerable<Animal> f = g; //<--ковариация
-	IEnumerable<Animal> f1 = new List<Dog>(); //<--ковариация
 }

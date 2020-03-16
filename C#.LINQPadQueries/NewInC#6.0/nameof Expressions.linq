@@ -51,8 +51,7 @@ public class Sample : INotifyPropertyChanged
 	public void NotifyPropertyChanged(string propName)
 	{
 		if (PropertyChanged != null)
-			PropertyChanged(this,
-				new PropertyChangedEventArgs(propName));
+			PropertyChanged(this, new PropertyChangedEventArgs(propName));
 	}
 
 	public event PropertyChangedEventHandler PropertyChanged;
